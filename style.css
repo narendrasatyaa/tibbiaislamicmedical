@@ -1,0 +1,188 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  line-height: 1.6;
+  background-color: #f8f8f8;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #000;
+  margin-left: 30px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #666;
+  text-decoration: underline;
+}
+
+.contact-btn {
+  border: 2px solid #000;
+  padding: 5px 15px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.contact-btn:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+/* Hero Section */
+.hero {
+  background: url("./lisa-hobs.jpg") center/cover no-repeat;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 0 20px;
+  margin-top: 60px; /* Untuk mencegah tertutup navbar */
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.hero::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3); /* Overlay gelap */
+}
+
+.hero-content {
+  position: relative;
+  background-color: #fff;
+  opacity: 85%;
+  padding: 40px;
+  border-radius: 10px;
+  max-width: 600px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #000;
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+.btn-green {
+  display: inline-block;
+  background-color: #28a745;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.btn-green:hover {
+  background-color: #218838;
+}
+
+.about {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #f9f9f9;
+  margin-top: 20px;
+  padding: 60px;
+  height: 100vh;
+}
+
+.image-conten {
+  max-width: 800px;
+  border-radius: 7px;
+  box-shadow: 0 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.conten-about {
+  padding: 10px;
+  margin: 20px;
+  max-width: 550px;
+}
+
+.conten-about h3 {
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #68b684;
+}
+
+.conten-about h1 {
+  font-size: 2rem;
+  font-family: sans-serif;
+  margin-bottom: 30px;
+  line-height: 1;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.online-consultasi {
+  text-decoration: none;
+  color: black;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

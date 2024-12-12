@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Halaman Registrasi</title>
+    <link rel="stylesheet" href="registrasi.css" />
+    <link rel="stylesheet" href="footer.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="logo">TIBBIA ISLAMIC MEDICAL</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html #conten-about">About</a></li>
+        <li><a href="index.html #service">Services</a></li>
+        <!-- <li><a href="#">Team</a></li>
+        <li><a href="#">Login</a></li> -->
+        <li><a href="#" class="contact-btn">CONTACT</a></li>
+      </ul>
+    </nav>
+    <!-- Section Registrasi -->
+    <section class="registration-container">
+      <div class="registration-box">
+        <h2>Register</h2>
+        <form action="#" method="post">
+          <div class="input-group">
+            <label for="username">Nama (Username)</label>
+            <input
+              type="text"
+              id="username"
+              name="username"
+              placeholder="Masukkan nama Anda"
+              required
+            />
+          </div>
+
+          <div class="input-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Masukkan email Anda"
+              required
+            />
+          </div>
+
+          <div class="input-group">
+            <label for="phone">No Telepon</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="Masukkan nomor telepon Anda"
+              required
+            />
+          </div>
+
+          <div class="input-group">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Masukkan password Anda"
+              required
+            />
+            <div class="show-password">
+              <input
+                type="checkbox"
+                id="show-password"
+                onclick="togglePassword()"
+              />
+              <label for="show-password">Tampilkan Password</label>
+            </div>
+          </div>
+          <!-- 
+          <div class="checkbox-group">
+            <input type="checkbox" id="terms" required />
+            <label for="terms"
+              >Saya menyetujui <a href="#">Syarat & Ketentuan</a></label
+            >
+          </div> -->
+
+          <button type="submit" class="submit-btn">Daftar</button>
+          <p class="login-link">
+            Sudah punya akun?
+            <a href="login.html">Login di sini</a>
+          </p>
+        </form>
+      </div>
+    </section>
+    <footer>
+      <div class="footer-links">
+        <a href="#">Schedule Appointment</a>
+        <a href="#">Complete Intake</a>
+        <a href="#">FAQ</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+      <p class="web-design">Web design by <strong>F10</strong></p>
+    </footer>
+  </body>
+
+  <script>
+    <!-- Script untuk menampilkan password -->
+    function togglePassword() {
+      const passwordInput = document.getElementById("password");
+      const showPasswordCheckbox = document.getElementById("show-password");
+
+      if (showPasswordCheckbox.checked) {
+        passwordInput.type = "text";
+      } else {
+        passwordInput.type = "password";
+      }
+    }
+
+    document.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", function (e) {
+        e.preventDefault();
+        const href = this.getAttribute("href");
+
+        document.body.style.animation = "fadeOut 0.5s ease-out forwards";
+        setTimeout(() => (window.location.href = href), 500);
+      });
+    });
+  </script>
+</html>
